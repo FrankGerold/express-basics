@@ -1,0 +1,13 @@
+{
+  "name": "express-basics",
+  "version": "1.0.0",
+  "description": "Express JS Tutorial",
+  "main": "src/app.js",
+  "repository": "git@github.com:FrankGerold/express-basics.git",
+  "author": "Frank Gerold <FrankETSGerold@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.3"
+  }
+}
