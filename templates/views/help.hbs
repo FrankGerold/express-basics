@@ -2,13 +2,16 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Help</title>
+    <title>{{ title }}</title>
     <link rel="stylesheet" href="/css/styles.css">
     <script type="text/javascript" src="/js/app.js"></script>
+    <link rel="icon" href="/img/cloud.svg">
   </head>
   <body>
+    <div class="content">
     {{> header }}
     <p>{{ message }}</p>
+    </div>
     {{> footer}}
   </body>
 </html>

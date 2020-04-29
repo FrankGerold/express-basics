@@ -25,7 +25,8 @@ app.use(express.static(publicPath))
 app.get('', (request, response) => {
     response.render('index', {
       title: 'Weather App',
-      name: 'Frankie G'
+      name: 'Frankie G',
+      message: 'get the weather here lol'
     })
 })
 
