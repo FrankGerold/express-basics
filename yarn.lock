@@ -395,6 +395,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"commander@npm:~2.20.3":
+  version: 2.20.3
+  resolution: "commander@npm:2.20.3"
+  checksum: 2/b73428e97de7624323f81ba13f8ed9271de487017432d18b4da3f07cfc528ad754bbd199004bd5d14e0ccd67d1fdfe0ec8dbbd4c438b401df3c4cc387bfd1daa
+  languageName: node
+  linkType: hard
+
 "concat-map@npm:0.0.1":
   version: 0.0.1
   resolution: "concat-map@npm:0.0.1"
@@ -641,6 +648,7 @@ __metadata:
   resolution: "express-basics@workspace:."
   dependencies:
     express: ^4.17.1
+    hbs: ^4.1.1
     nodemon: ^2.0.3
   languageName: unknown
   linkType: soft
@@ -732,6 +740,13 @@ __metadata:
     statuses: ~1.5.0
     unpipe: ~1.0.0
   checksum: 2/f2e5b6bfe2201f13e74408530a7f354b7846ab3e648b3dde4f8ed3b773c8a743c16b0f378cb5113df7fef84c5be364bb1a3655f0a75571f163c982289fbd9671
+  languageName: node
+  linkType: hard
+
+"foreachasync@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "foreachasync@npm:3.0.0"
+  checksum: 2/02d25a451bbbe4430d8ca19a26815fce892574ee524af35001ff6d61c1b9c82396ee21b0cd493580d5f78d2daaf7a61d1ffb7910b9002f72283d9dc1c25b5f7b
   languageName: node
   linkType: hard
 
@@ -902,6 +917,24 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
+"handlebars@npm:4.7.6":
+  version: 4.7.6
+  resolution: "handlebars@npm:4.7.6"
+  dependencies:
+    minimist: ^1.2.5
+    neo-async: ^2.6.0
+    source-map: ^0.6.1
+    uglify-js: ^3.1.4
+    wordwrap: ^1.0.0
+  dependenciesMeta:
+    uglify-js:
+      optional: true
+  bin:
+    handlebars: bin/handlebars
+  checksum: 2/50276715da3e410f1d485635029b77e09b8c9244d9e49119d5f39ed978a3d44ce94f5d6120efeb707da0ba9dd0cddf140d8d2ac160721d93aa9f4234474ad318
+  languageName: node
+  linkType: hard
+
 "har-schema@npm:^2.0.0":
   version: 2.0.0
   resolution: "har-schema@npm:2.0.0"
@@ -944,6 +977,16 @@ fsevents@~2.1.2:
   version: 2.1.0
   resolution: "has-yarn@npm:2.1.0"
   checksum: 2/105682f263a3437972c75594cdda237ce8454f67cae37a36a507701f300dade0460231dabbe873a7df035b7c0a0b3a686c9fcd1eebb29c73ca35753ecae6fb7d
+  languageName: node
+  linkType: hard
+
+"hbs@npm:^4.1.1":
+  version: 4.1.1
+  resolution: "hbs@npm:4.1.1"
+  dependencies:
+    handlebars: 4.7.6
+    walk: 2.3.14
+  checksum: 2/5f470ce5e17f6065e51af9fe9efad3f7c26c5d41a5535a1b8bddb4ed347909917de3b1f3691f24db42ed4f43a66d83752a971d08bc24d59e29fa2d65755f6dc0
   languageName: node
   linkType: hard
 
@@ -1403,6 +1446,13 @@ fsevents@~2.1.2:
   version: 0.6.2
   resolution: "negotiator@npm:0.6.2"
   checksum: 2/4b230bd15f0862d16c54ce0243fcfcf835ad59c8e58c467b4504dd28c9868cff71ff485b02cc575dc69dca819b58a1fadc9fb28403f45721f38a8fffde007d54
+  languageName: node
+  linkType: hard
+
+"neo-async@npm:^2.6.0":
+  version: 2.6.1
+  resolution: "neo-async@npm:2.6.1"
+  checksum: 2/b359ccaa5cc3eea9c49605b830382e2ec7661f1746b7210dc1f997645a40f9daf3084328151ecb21800e0e78d891dbf8d46f70c3cb5e8c5dab8a909b5597f9a1
   languageName: node
   linkType: hard
 
@@ -1909,6 +1959,13 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
+"source-map@npm:^0.6.1":
+  version: 0.6.1
+  resolution: "source-map@npm:0.6.1"
+  checksum: 2/8647829a0611724114022be455ca1c8a2c8ae61df81c5b3667d9b398207226a1e21174fb7bbf0b4dbeb27ac358222afb5a14f1c74a62a62b8883b012e5eb1270
+  languageName: node
+  linkType: hard
+
 "sshpk@npm:^1.7.0":
   version: 1.16.1
   resolution: "sshpk@npm:1.16.1"
@@ -2139,6 +2196,17 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
+"uglify-js@npm:^3.1.4":
+  version: 3.9.1
+  resolution: "uglify-js@npm:3.9.1"
+  dependencies:
+    commander: ~2.20.3
+  bin:
+    uglifyjs: bin/uglifyjs
+  checksum: 2/bb667077492d8b0f2c9591a0420692302056c6df66f1c3d0bf4771854025147b6ece41159712f91374755a48e75694de9838c75a0464d4b7f96cbd2eb1c5fa2f
+  languageName: node
+  linkType: hard
+
 "undefsafe@npm:^2.0.2":
   version: 2.0.3
   resolution: "undefsafe@npm:2.0.3"
@@ -2244,6 +2312,15 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
+"walk@npm:2.3.14":
+  version: 2.3.14
+  resolution: "walk@npm:2.3.14"
+  dependencies:
+    foreachasync: ^3.0.0
+  checksum: 2/54b61ebfacda4bc4a1c471c651a703cc212d6f48ec1a04c62f84bfe46f3e84d7b2b854e3195fd050421d4a960e3f94dc2735d4090e77873e8a5f98bb21f33191
+  languageName: node
+  linkType: hard
+
 "which@npm:^1.3.1":
   version: 1.3.1
   resolution: "which@npm:1.3.1"
@@ -2270,6 +2347,13 @@ fsevents@~2.1.2:
   dependencies:
     string-width: ^4.0.0
   checksum: 2/729c30582e49bdcb1372216eedfd71d1640a1344a4b4e970bc9f33d575b56b130f530b383fbab2cf2bcffb76ea4357e6a66939778d8de91ca66037651d94e01a
+  languageName: node
+  linkType: hard
+
+"wordwrap@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "wordwrap@npm:1.0.0"
+  checksum: 2/b4f3f8104a727d1b08e77f43f3692977146f13074392747a3d9cfd631d0fc3ff1c0c034d44fcd7a22183c6505d2fc305421e3512671f8a56f903055671ace4ce
   languageName: node
   linkType: hard
 
