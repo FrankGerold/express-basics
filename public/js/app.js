@@ -8,7 +8,7 @@ const weatherSearch = (query) => {
 
 const displayForecast = (weatherData) => {
     if (weatherData.error) {
-      body.innerText = 'Please submit an actual location!'
+      body.innerText = weatherData.error
     }
     else {
       body.innerHTML = `<div class='forecast'><h2>${weatherData.location}</h2>
@@ -24,11 +24,15 @@ const body = document.querySelector('.main-text')
 
 weatherForm.addEventListener('submit', event => {
    event.preventDefault()
+
+   body.innerText = 'Loading Forecast...'
+
    let loc = locationField.value
-   console.log('query:', loc);
+
    if (!loc) {
-     console.log('please type a location');
+     body.innerText = 'Please type a location!';
    }
+
    else {
      weatherSearch(loc)
    }

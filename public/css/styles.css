@@ -21,6 +21,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh
+
 }
 
 .content {
@@ -28,7 +29,7 @@ body {
 }
 
 footer {
-  background:aliceblue;
+  background: aliceblue;
   padding: 1rem;
   margin: 1rem;
   color: #888888;
@@ -44,4 +45,20 @@ nav a{
   color: #888888;
   margin-right: 1.5rem;
   text-decoration: none;
+}
+
+input {
+  border: .1rem solid #cccccc
+  padding: .75rem
+}
+
+button {
+  cursor: pointer;
+  border: .1rem solid #888888;
+  background: #888888;
+  color: white;
+}
+
+html {
+    background: floralwhite;
 }
