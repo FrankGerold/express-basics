@@ -15,16 +15,16 @@ const geocode = (address, callback) => {
     request({uri: mapBox.apiRequest(), json: true}, (error, response) => {
 
         if (error) {
-            callback("Couldn't connect to location server")
+             callback("Couldn't connect to location server")
         }
 
-        else if (!response.body.features) {
-            callback("Couldnt find given location...")
+        else if (!response.body.features || !response.body.features[0]) {
+             callback("Couldnt find given location...")
         }
 
         else {
             let location = response.body.features[0]
-            callback(undefined, /*`For ${location.place_name}, the latitude is ${location.center[1]} and longitude is ${location.center[0]}!`*/ {
+            callback(undefined, {
                 location: location.place_name,
                 latitude: location.center[1],
                 longitude: location.center[0]

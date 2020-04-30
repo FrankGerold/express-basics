@@ -17,9 +17,13 @@ const forecast = (location, callback) => {
 
         if (error) {
             callback("Couldn't connect to weather service!")
-        } else if (response.body.error) {
+        }
+
+        else if (response.body.error) {
             callback("Couldn't find given location!")
-        } else {
+        }
+
+        else {
             let data = response.body
             callback(undefined, {
                 location: data.location.name,

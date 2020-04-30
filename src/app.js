@@ -3,6 +3,19 @@ const path = require('path')
 const express = require('express')
 const hbs = require('hbs')
 
+// IMporting other js files
+const forecast = require('./utils/forecast')
+const geocode = require('./utils/geocode')
+
+// Wanted to try using es2016 module syntax, too many errors
+// internally with the random node packages and dependencies.
+// Even tho it's
+// supported in node14 i guess moest software is still using
+// commonjs in the node ecosystem
+// import path from 'path'
+// import express from 'express'
+// import hbs from 'hbs'
+
 const app = express()
 
 // Define paths for Express config
@@ -45,18 +58,42 @@ app.get('/about', (request, response) => {
     })
 })
 
+//  Weather page will implement the Weather CLI app
 app.get('/weather', (request, response) => {
   if (!request.query.address) {
     return response.send({
-      error: 'Address is required'
+      error: 'Address is required!'
     })
   }
 
-  response.send({
-      location: request.query.address,
-      forecast: 'cold and dank'
+  let address = request.query.address
+
+  // Copy this from weather app,
+  geocode(address, (error, geocodeData) => {
+    if (error) {
+      return response.send(
+        {
+          error
+        }
+      )
+    }
+
+    forecast(geocodeData, (error, forecastData) => {
+      if (error) {
+        return response.send({error})
+      }
+
+      let full = forecastData.result()
+
+      response.send({
+        ...forecastData,
+        full
+      })
+    })
   })
 })
+
+
 
 app.get('/products', (request, response) => {
   if (!request.query.search) {
@@ -64,11 +101,6 @@ app.get('/products', (request, response) => {
       error: 'Please provide a search term!'
     })
   }
-
-  console.log(request.query);
-  response.send({
-    products: []
-  })
 })
 
 // Error pages
