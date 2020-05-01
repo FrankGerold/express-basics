@@ -1,7 +1,7 @@
 console.log(`Vlient-Side JS Loaded!`);
 
 const weatherSearch = (query) => {
-  return fetch(`http://localhost:3002/weather?address=${query}`)
+  return fetch(`/weather?address=${query}`)
   .then(r => r.json())
   .then(displayForecast)
 }

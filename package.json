@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Express JS Tutorial",
   "main": "src/app.js",
+  "scripts": {
+    "start": "node src/app.js"
+  },
   "repository": "git@github.com:FrankGerold/express-basics.git",
   "author": "Frank Gerold <FrankETSGerold@gmail.com>",
   "license": "MIT",

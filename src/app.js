@@ -7,6 +7,8 @@ const hbs = require('hbs')
 const forecast = require('./utils/forecast')
 const geocode = require('./utils/geocode')
 
+const port = process.env.PORT || 3002
+
 // Wanted to try using es2016 module syntax, too many errors
 // internally with the random node packages and dependencies.
 // Even tho it's
@@ -118,4 +120,4 @@ app.get('*', (request, response) => {
     })
 })
 
-app.listen(3002, () => console.log('Server running on port 3002!'))
+app.listen(port, () => console.log(`Server running on port ${port}!`))
