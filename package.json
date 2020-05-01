@@ -4,7 +4,8 @@
   "description": "Express JS Tutorial",
   "main": "src/app.js",
   "scripts": {
-    "start": "node src/app.js"
+    "start": "node src/app.js",
+    "dev": "nodemon -V -e js,hbs,html,json,mjs,css"
   },
   "repository": "git@github.com:FrankGerold/express-basics.git",
   "author": "Frank Gerold <FrankETSGerold@gmail.com>",
@@ -12,7 +13,9 @@
   "dependencies": {
     "express": "^4.17.1",
     "hbs": "^4.1.1",
-    "nodemon": "^2.0.3",
     "postman-request": "^2.88.1-postman.22"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.3"
   }
 }
